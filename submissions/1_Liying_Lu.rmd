@@ -1,0 +1,185 @@
+---
+title:  Python For Data Analysis - Assignment One
+author: "Liying Lu"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+  odt_document: default
+---
+
+## A. Basic commands
+1.  Navigate to your working directory for the class.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 ~/Desktop
+$ cd ..
+
+liyin@Lily MINGW64 ~
+$ d:
+bash: d:: command not found
+
+liyin@Lily MINGW64 ~
+$ cd d:
+
+liyin@Lily MINGW64 /d
+$ ls
+'$RECYCLE.BIN'/          MapData/
+ 360/                   'Microsoft Edge downloads'/
+ Apple/                 'Program Files'/
+ BaiduNetdisk/           Recovery/
+ BaiduNetdiskDownload/   SoftwareDistribution/
+ bootstrap-4.3.1-dist/  'System Volume Information'/
+ ChromeDownloads/        Win_AnyConnect4.8.02045/
+ DeliveryOptimization/   WindowsApps/
+ eSupport/               WpSystem/
+ Java/                   WUDownloadCache/
+ liying/
+
+liyin@Lily MINGW64 /d
+$ cd liying
+
+liyin@Lily MINGW64 /d/liying
+$ ls
+'!working'/  'healthy lifestyle'/   Pictures/   Videos/
+ Documents/   Music/                School/
+
+liyin@Lily MINGW64 /d/liying
+$ cd "!working"/GitHub
+bash: !working: event not found
+
+liyin@Lily MINGW64 /d/liying
+$ cd \!working/
+
+liyin@Lily MINGW64 /d/liying/!working
+$ cd GitHub/python-for-data-analysis/
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+$ ls
+_config.yml   data/    lessons/  README.md     submissions/
+assignments/  images/  LICENSE   schedule.tsv
+```
+
+
+
+
+2.  Within that directory, create a temporary test directory.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+$ mkdir tempdir
+```
+
+3.  Create a file using one method I showed you.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ touch file1.txt
+```
+
+4.  Create a file using a different method I showed you.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ cp file1.txt file2.txt
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ ls
+file1.txt  file2.txt
+```
+
+5.  Rename one of the files.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ mv file1.txt file1_renamed.txt
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ ls
+file1_renamed.txt  file2.txt
+```
+
+6.  Copy one of the files.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ cp file2.txt file2_COPY.txt
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ ls
+file1_renamed.txt  file2.txt  file2_COPY.txt
+```
+
+7.  Delete one of the files.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ rm file2_COPY.txt
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ ls
+file1_renamed.txt  file2.txt
+```
+
+8.  Delete the temporary directory.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ rm file1_renamed.txt file2.txt
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ ls
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+$ cd ..
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+$ rmdir tempdir/
+
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+$ ls
+_config.yml   data/    lessons/  README.md     submissions/
+assignments/  images/  LICENSE   schedule.tsv
+```
+
+9.  Get a list of the commands you've typed already.
+```{bash eval=FALSE, include=TRUE}
+liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+$ history
+  144  ls
+  145  cd ..
+  146  d:
+  147  cd d:
+  148  ls
+  149  cd liying
+  150  ls
+  151  cd \!working/
+  152  cd GitHub/python-for-data-analysis/
+  153  ls
+  154  mkdir tempdir
+  155  cd tempdir
+  156  cat file1
+  157  mk file1
+  158  touch file1.txt
+  159  cat "Second file" > file2.txt
+  160  cp file1.txt file2.txt
+  161  ls
+  162  mv file1.txt file1_renamed.txt
+  163  ls
+  164  cp file2.txt file2_COPY.txt
+  165  ls
+  166  rm file2_COPY.txt
+  167  ls
+  168  cd ..
+  169  rmdir tempdir/
+  170  cd tempdir
+  171  rm file1_renamed.txt file2.txt
+  172  ls
+  173  cd ..
+  174  rmdir tempdir/
+  175  ls
+  176  history
+```
+
+10.  See which processes are running on your computer.
+```{bash eval=FALSE, include=TRUE}
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1755    1599    1755       1980  pty0      197609 10:49:35 /usr/bin/ps
+     1599    1598    1599      12572  pty0      197609 10:38:20 /usr/bin/bash
+     1598       1    1598      15028  ?         197609 10:38:20 /usr/bin/mintty
+```
+

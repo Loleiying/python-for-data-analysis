@@ -183,3 +183,83 @@ $ ps
      1598       1    1598      15028  ?         197609 10:38:20 /usr/bin/mintty
 ```
 
+
+
+## B. Working with commands
+1.  Pick a command from class. Using a Unix command to find out, what does this command do?
+```{bash eval=FALSE, include=TRUE}
+$ wc --help
+Usage: wc [OPTION]... [FILE]...
+  or:  wc [OPTION]... --files0-from=F
+Print newline, word, and byte counts for each FILE, and a total line if
+more than one FILE is specified.  A word is a non-zero-length sequence of
+characters delimited by white space.
+
+With no FILE, or when FILE is -, read standard input.
+
+The options below may be used to select which counts are printed, always in
+the following order: newline, word, character, byte, maximum line length.
+  -c, --bytes            print the byte counts
+  -m, --chars            print the character counts
+  -l, --lines            print the newline counts
+      --files0-from=F    read input from the files specified by
+                           NUL-terminated names in file F;
+                           If F is - then read names from standard input
+  -L, --max-line-length  print the maximum display width
+  -w, --words            print the word counts
+      --help     display this help and exit
+      --version  output version information and exit
+
+```
+
+2.  Pick a command from class. Using a Google search to find out, what does this command do?  
+`grep` is used to search text and strings in a given file. Command examples are shown below:  
+*  Search any line that contians the word in filename:   
+`grep 'word' filename`
+*  Perform a case-insensitive search for the word 'bar':  
+`grep -i 'bar' file1`
+*  Look for all files in the current directory and in all of its subdirectories for the word 'httpd':  
+`grep -R 'httpd'`
+*  Search and display the total number of times that the string 'nixcraft' appears in a file frontpage.md:  
+`grep -c 'nixcraft' frontpage.md`
+
+3.  Where are the commands mv and cp are located on your computer?
+```{bash eval=FALSE, include=TRUE}
+$ which mv
+/usr/bin/mv
+
+$ which cp
+/usr/bin/cp
+```
+
+4.  What happens when you type Tab in the middle of typing a command?  
+Bash will try to auto complete my command, or suggest options to me. 
+
+5.  What happens when you type Tab in the middle of typing a file name or path?  
+Bash will try to auto-complete my file name or path, or suggest options that match my partial filename and path. 
+
+## C. Setting up your bash environment
+1.  Download a text editor such as Atom or Sublime Text if you haven't already.
+2.  Using your text editor, customize your terminal by editing the file `.bash_profile` in your home directory. Alternatively, you can edit the file `.bashrc` in your home directory and have it automatically sourced by `.bash_profile` (see Lesson 2).
+3.  Source your bash profile file with the command `source ~/.bash_profile`.
+4.  Open a new terminal to make sure it automatically sources your bash profile file. You may have to change the preferences in the Terminal app.
+
+
+## D. More commands
+1.  Print the first 5 lines of a text file.
+2.  Print the last 10 commands you entered.
+3.  View the contents of a file without printing anything to the screen.
+4.  Open a file in its designated application.
+5.  Determine the kind/type of a file.
+6.  Search for a word in a file.
+7.  Get only the third column of a tab-delimited file. (To insert a tab character, type Ctrl-V and then Tab.)
+8.  Using a different method, get the first field of a tab-delimited file and save it as a new file.
+
+## E. Paths and variables
+1.  Navigate to root and home directories using relative paths.
+2.  Navigate to root and home directories using absolute paths.
+3.  Store an integer as a shell variable then print it.
+4.  Store a file name as a shell variable.
+5.  Print your current path variable.
+6.  Print your home directory.
+7.  Write a for loop to count to 10

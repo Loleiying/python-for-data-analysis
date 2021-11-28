@@ -381,10 +381,114 @@ Chris
 ```
 
 ## E. Paths and variables
-1.  Navigate to root and home directories using relative paths.
-2.  Navigate to root and home directories using absolute paths.
+1.  Navigate to root and home directories using relative paths.  
+A relative path refers to the location of a directory using current directory as a reference and does not specify the root directory and the complete directory list like absolute path.
+```{bash eval=FALSE, include=TRUE}
+[liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/submissions]$
+cd
+[liyin@Lily:~]$
+pwd
+/c/Users/liyin
+```
+
+2.  Navigate to root and home directories using absolute paths.  
+An absolute path, also known as file path or full path, refers to a specific location in the file system, irrespective of the current working directory. It contains the root directory and the complete directory list.  
+```{bash eval=FALSE, include=TRUE}
+[liyin@Lily:~/Desktop]$
+pwd
+/c/Users/liyin/Desktop
+[liyin@Lily:~/Desktop]$
+cd ~
+```
+
 3.  Store an integer as a shell variable then print it.
+```{bash eval=FALSE, include=TRUE}
+[liyin@Lily:~]$
+x=72
+[liyin@Lily:~]$
+echo $x
+72
+```
+
+
 4.  Store a file name as a shell variable.
+```{bash eval=FALSE, include=TRUE}
+[liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+filename="test.xlsx"
+[liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+start $filename
+
+```
+
 5.  Print your current path variable.
+```{bash eval=FALSE, include=TRUE}
+[liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+echo "$PATH"
+/c/Users/liyin/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/liyin/bin:/c/Program Files/Java/jdk-10.0.1/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/dotnet:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Intel/WiFi/bin:/c/Program Files/Common Files/Intel/WirelessCommon:/cmd:/c/Program Files/PuTTY:/c/Program Files/gnuplot/bin:/c/Users/liyin/AppData/Local/Microsoft/WindowsApps:/c/Users/liyin/AppData/Roaming/Dashlane/4.8.7.35982/ucrt:/c/Users/liyin/AppData/Local/atom/bin:/c/Users/liyin/AppData/Local/GitHubDesktop/bin:/c/Users/liyin/AppData/Local/Microsoft/WindowsApps:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+[liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+echo "${PATH//:/$'\n'}"
+/c/Users/liyin/bin
+/mingw64/bin
+/usr/local/bin
+/usr/bin
+/bin
+/mingw64/bin
+/usr/bin
+/c/Users/liyin/bin
+/c/Program Files/Java/jdk-10.0.1/bin
+/c/Program Files (x86)/Common Files/Oracle/Java/javapath
+/c/Program Files (x86)/Intel/iCLS Client
+/c/Program Files/Intel/iCLS Client
+/c/WINDOWS/system32
+/c/WINDOWS
+/c/WINDOWS/System32/Wbem
+/c/WINDOWS/System32/WindowsPowerShell/v1.0
+/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL
+/c/Program Files/Intel/Intel(R) Management Engine Components/DAL
+/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT
+/c/Program Files/Intel/Intel(R) Management Engine Components/IPT
+/c/Program Files/dotnet
+/c/WINDOWS/System32/OpenSSH
+/c/Program Files/Intel/WiFi/bin
+/c/Program Files/Common Files/Intel/WirelessCommon
+/cmd
+/c/Program Files/PuTTY
+/c/Program Files/gnuplot/bin
+/c/Users/liyin/AppData/Local/Microsoft/WindowsApps
+/c/Users/liyin/AppData/Roaming/Dashlane/4.8.7.35982/ucrt
+/c/Users/liyin/AppData/Local/atom/bin
+/c/Users/liyin/AppData/Local/GitHubDesktop/bin
+/c/Users/liyin/AppData/Local/Microsoft/WindowsApps
+/usr/bin/vendor_perl
+/usr/bin/core_perl
+
+```
+
 6.  Print your home directory.
+```{bash eval=FALSE, include=TRUE}
+[liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+cd
+[liyin@Lily:~]$
+pwd
+/c/Users/liyin
+
+```
+
 7.  Write a for loop to count to 10
+```{bash eval=FALSE, include=TRUE}
+[liyin@Lily:~]$
+for i in {1..10}; do  echo $i; done
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+```
+

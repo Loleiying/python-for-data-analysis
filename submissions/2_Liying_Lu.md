@@ -148,4 +148,4 @@ I can create a Python 2 or R Notebook. `python --verion` shows that my Python ve
 Python 3.8.12
 
 3. Pick 1 of the 4 sections in Loops and Control Structures we covered in Lesson 4: boolean and comparison operations, if tests, while loops, and for loops. Using a Jupyter notebook in your python3 environment, type the code from that section in one or more cells, then run those cells. Put a header above the code cell using a Markdown cell. Practice creating, deleting, and moving cells using the keyboard shortcuts.
-I did not install QIIME.
+

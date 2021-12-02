@@ -1,0 +1,484 @@
+# Assignment 1
+## A. Basic commands
+1.  Navigate to your working directory for the class.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 ~/Desktop
+    $ cd ..
+
+    liyin@Lily MINGW64 ~
+    $ d:
+    bash: d:: command not found
+
+    liyin@Lily MINGW64 ~
+    $ cd d:
+
+    liyin@Lily MINGW64 /d
+    $ ls
+    '$RECYCLE.BIN'/          MapData/
+    360/                   'Microsoft Edge downloads'/
+    Apple/                 'Program Files'/
+    BaiduNetdisk/           Recovery/
+    BaiduNetdiskDownload/   SoftwareDistribution/
+    bootstrap-4.3.1-dist/  'System Volume Information'/
+    ChromeDownloads/        Win_AnyConnect4.8.02045/
+    DeliveryOptimization/   WindowsApps/
+    eSupport/               WpSystem/
+    Java/                   WUDownloadCache/
+    liying/
+
+    liyin@Lily MINGW64 /d
+    $ cd liying
+
+    liyin@Lily MINGW64 /d/liying
+    $ ls
+    '!working'/  'healthy lifestyle'/   Pictures/   Videos/
+    Documents/   Music/                School/
+
+    liyin@Lily MINGW64 /d/liying
+    $ cd "!working"/GitHub
+    bash: !working: event not found
+
+    liyin@Lily MINGW64 /d/liying
+    $ cd \!working/
+
+    liyin@Lily MINGW64 /d/liying/!working
+    $ cd GitHub/python-for-data-analysis/
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+    $ ls
+    _config.yml   data/    lessons/  README.md     submissions/
+    assignments/  images/  LICENSE   schedule.tsv
+    ```
+
+
+
+
+2.  Within that directory, create a temporary test directory.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+    $ mkdir tempdir
+    ```
+
+3.  Create a file using one method I showed you.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ touch file1.txt
+    ```
+
+4.  Create a file using a different method I showed you.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ cp file1.txt file2.txt
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ ls
+    file1.txt  file2.txt
+    ```
+
+5.  Rename one of the files.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ mv file1.txt file1_renamed.txt
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ ls
+    file1_renamed.txt  file2.txt
+    ```
+
+6.  Copy one of the files.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ cp file2.txt file2_COPY.txt
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ ls
+    file1_renamed.txt  file2.txt  file2_COPY.txt
+    ```
+
+7.  Delete one of the files.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ rm file2_COPY.txt
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ ls
+    file1_renamed.txt  file2.txt
+    ```
+
+8.  Delete the temporary directory.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ rm file1_renamed.txt file2.txt
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ ls
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis/tempdir (feature/assignment1)
+    $ cd ..
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+    $ rmdir tempdir/
+
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+    $ ls
+    _config.yml   data/    lessons/  README.md     submissions/
+    assignments/  images/  LICENSE   schedule.tsv
+    ```
+
+9.  Get a list of the commands you've typed already.
+    ```{bash eval=FALSE, include=TRUE}
+    liyin@Lily MINGW64 /d/liying/!working/GitHub/python-for-data-analysis (feature/assignment1)
+    $ history
+    144  ls
+    145  cd ..
+    146  d:
+    147  cd d:
+    148  ls
+    149  cd liying
+    150  ls
+    151  cd \!working/
+    152  cd GitHub/python-for-data-analysis/
+    153  ls
+    154  mkdir tempdir
+    155  cd tempdir
+    156  cat file1
+    157  mk file1
+    158  touch file1.txt
+    159  cat "Second file" > file2.txt
+    160  cp file1.txt file2.txt
+    161  ls
+    162  mv file1.txt file1_renamed.txt
+    163  ls
+    164  cp file2.txt file2_COPY.txt
+    165  ls
+    166  rm file2_COPY.txt
+    167  ls
+    168  cd ..
+    169  rmdir tempdir/
+    170  cd tempdir
+    171  rm file1_renamed.txt file2.txt
+    172  ls
+    173  cd ..
+    174  rmdir tempdir/
+    175  ls
+    176  history
+    ```
+
+10.  See which processes are running on your computer.
+    ```{bash eval=FALSE, include=TRUE}
+    $ ps
+        PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+        1755    1599    1755       1980  pty0      197609 10:49:35 /usr/bin/ps
+        1599    1598    1599      12572  pty0      197609 10:38:20 /usr/bin/bash
+        1598       1    1598      15028  ?         197609 10:38:20 /usr/bin/mintty
+    ```
+
+
+
+## B. Working with commands
+1.  Pick a command from class. Using a Unix command to find out, what does this command do?
+    ```{bash eval=FALSE, include=TRUE}
+    $ wc --help
+    Usage: wc [OPTION]... [FILE]...
+    or:  wc [OPTION]... --files0-from=F
+    Print newline, word, and byte counts for each FILE, and a total line if
+    more than one FILE is specified.  A word is a non-zero-length sequence of
+    characters delimited by white space.
+
+    With no FILE, or when FILE is -, read standard input.
+
+    The options below may be used to select which counts are printed, always in
+    the following order: newline, word, character, byte, maximum line length.
+    -c, --bytes            print the byte counts
+    -m, --chars            print the character counts
+    -l, --lines            print the newline counts
+        --files0-from=F    read input from the files specified by
+                            NUL-terminated names in file F;
+                            If F is - then read names from standard input
+    -L, --max-line-length  print the maximum display width
+    -w, --words            print the word counts
+        --help     display this help and exit
+        --version  output version information and exit
+
+    ```
+
+2.  Pick a command from class. Using a Google search to find out, what does this command do?  
+`grep` is used to search text and strings in a given file. Command examples are shown below:  
+*  Search any line that contians the word in filename:   
+`grep 'word' filename`
+*  Perform a case-insensitive search for the word 'bar':  
+`grep -i 'bar' file1`
+*  Look for all files in the current directory and in all of its subdirectories for the word 'httpd':  
+`grep -R 'httpd'`
+*  Search and display the total number of times that the string 'nixcraft' appears in a file frontpage.md:  
+`grep -c 'nixcraft' frontpage.md`
+
+3.  Where are the commands mv and cp are located on your computer?
+    ```{bash eval=FALSE, include=TRUE}
+    $ which mv
+    /usr/bin/mv
+
+    $ which cp
+    /usr/bin/cp
+    ```
+
+4.  What happens when you type Tab in the middle of typing a command?  
+Bash will try to auto complete my command, or suggest options to me. 
+
+5.  What happens when you type Tab in the middle of typing a file name or path?  
+Bash will try to auto-complete my file name or path, or suggest options that match my partial filename and path. 
+
+## C. Setting up your bash environment
+1.  Download a text editor such as Atom or Sublime Text if you haven't already.
+2.  Using your text editor, customize your terminal by editing the file `.bash_profile` in your home directory. Alternatively, you can edit the file `.bashrc` in your home directory and have it automatically sourced by `.bash_profile` (see Lesson 2).
+3.  Source your bash profile file with the command `source ~/.bash_profile`.
+4.  Open a new terminal to make sure it automatically sources your bash profile file. You may have to change the preferences in the Terminal app.
+
+I have completed this part using Atom. Since there was no .bashrc file in my root directory, I created one with `touch .bashrc` and input some of the desirable customization that I copied from the lesson. When I restarted GitBash, bash shows that there is no `.bash_profile` found and thus automatically created one in the root directory. 
+
+Below shows the content of my `.bash_profile` and `.bashrc` files. 
+
+    ```{bash eval=FALSE, include=TRUE}
+    # .bash_profile
+    if [ -r ~/.bashrc ]; then
+        source ~/.bashrc;
+    fi
+
+    # generated by Git for Windows
+    test -f ~/.profile && . ~/.profile
+    test -f ~/.bashrc && . ~/.bashrc
+    ```
+
+    ```{bash eval=FALSE, include=TRUE}
+    # .bashrc
+    # customize prompt with color and pwd
+    PS1="\[\033[1;33m\][\u@\h:\w]$\[\033[0m\]\n"
+
+    # customize terminal window title to display pwd
+    PROMPT_COMMAND='echo -ne "\033]0; ${PWD##*/}\007"'
+
+    # autocomplete history with up arrow
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+
+    # grep coloring
+    export GREP_OPTIONS='--color=auto'
+    export GREP_COLOR='01;38;5;226'
+
+    # history settings
+    export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+    export HISTSIZE=100000                   # big big history
+    export HISTFILESIZE=100000               # big big history
+    shopt -s histappend                      # append to history, don't overwrite it
+
+    # save and reload the history after each command finishes
+    export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+    # command aliases (shortcuts)
+    alias excel='open -a /Applications/Microsoft\ Office\ 2011/Microsoft\ Excel.app'
+    ```
+
+
+## D. More commands
+1.  Print the first 5 lines of a text file.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis]$
+    head -n 5 README.md
+    # Python for Data Analysis
+
+    Course in data science. Learn to analyze data of all types using the Python programming language. No programming experience is necessary.
+
+    Quick links: [???? lessons](https://github.com/cuttlefishh/python-for-data-analysis/tree/master/lessons)  [??? Lesson Schedule](https://github.com/cuttlefishh/python-for-data-analysis#lesson-schedule)
+    ```
+
+
+2.  Print the last 10 commands you entered.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis]$
+    history 10
+    249  ls
+    250  cd submissions/
+    251  ls
+    252  cd
+    253  source ~/.bash_profile
+    254  cd d:
+    255  cd liying/\!working/GitHub/python-for-data-analysis/
+    256  ls
+    257  head -n 5 README.md
+    258  history 10
+    ```
+
+
+3.  View the contents of a file without printing anything to the screen.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis]$
+    less README.md
+    ```
+
+4.  Open a file in its designated application.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+    start test.xlsx
+    ```
+
+5.  Determine the kind/type of a file.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+    file test.xlsx
+    test.xlsx: Microsoft Excel 2007+
+    ```
+
+
+
+6.  Search for a word in a file.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis]$
+    grep -i 'python for data analysis' README.md
+    grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+    # Python for Data Analysis
+    * [_Python for Data Analysis_](http://proquest.safaribooksonline.com/book/programming/python/9781491957653) 2nd Edition by Wes McKinney (O'Reilly) -- Manual focused on Pandas, the popular Python package for data analysis, by its creator. GitHub page: <https://github.com/wesm/pydata-book>.
+    * [R vs. Python for Data Analysis](http://www.r-bloggers.com/choosing-r-or-python-for-data-analysis-an-infographic/) -- Fun cartoon to abate or fuel your biases
+    Lessons 10-18 will focus on Python packages for data analysis. We will work through McKinney's _Python for Data Analysis_, which is all about analyzing data, doing statistics, and making pretty plots. You may find that Python can emulate or exceed much of the functionality of R and MATLAB.
+
+    ```
+
+7.  Get only the third column of a tab-delimited file. (To insert a tab character, type Ctrl-V and then Tab.)
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/submissions/temp]$
+    head test.txt
+    Name    City    Age
+    Anna    Boston  18
+    Chris   Chicago 22
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/submissions/temp]$
+    cut -f 3 test.txt
+    Age
+    18
+    22
+    ```
+
+8.  Using a different method, get the first field of a tab-delimited file and save it as a new file.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/submissions/temp]$
+    awk -F"\t" '{print $1}' test.txt > names.txt
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/submissions/temp]$
+    ls
+    names.txt  test.txt
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/submissions/temp]$
+    head names.txt
+    Name
+    Anna
+    Chris
+    ```
+
+## E. Paths and variables
+1.  Navigate to root and home directories using relative paths.  
+A relative path refers to the location of a directory using current directory as a reference and does not specify the root directory and the complete directory list like absolute path.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/submissions]$
+    cd
+    [liyin@Lily:~]$
+    pwd
+    /c/Users/liyin
+    ```
+
+2.  Navigate to root and home directories using absolute paths.  
+An absolute path, also known as file path or full path, refers to a specific location in the file system, irrespective of the current working directory. It contains the root directory and the complete directory list.  
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:~/Desktop]$
+    pwd
+    /c/Users/liyin/Desktop
+    [liyin@Lily:~/Desktop]$
+    cd ~
+    ```
+
+3.  Store an integer as a shell variable then print it.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:~]$
+    x=72
+    [liyin@Lily:~]$
+    echo $x
+    72
+    ```
+
+
+4.  Store a file name as a shell variable.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+    filename="test.xlsx"
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+    start $filename
+
+    ```
+
+5.  Print your current path variable.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+    echo "$PATH"
+    /c/Users/liyin/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/liyin/bin:/c/Program Files/Java/jdk-10.0.1/bin:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Intel/iCLS Client:/c/Program Files/Intel/iCLS Client:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/c/Program Files/dotnet:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Intel/WiFi/bin:/c/Program Files/Common Files/Intel/WirelessCommon:/cmd:/c/Program Files/PuTTY:/c/Program Files/gnuplot/bin:/c/Users/liyin/AppData/Local/Microsoft/WindowsApps:/c/Users/liyin/AppData/Roaming/Dashlane/4.8.7.35982/ucrt:/c/Users/liyin/AppData/Local/atom/bin:/c/Users/liyin/AppData/Local/GitHubDesktop/bin:/c/Users/liyin/AppData/Local/Microsoft/WindowsApps:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+    echo "${PATH//:/$'\n'}"
+    /c/Users/liyin/bin
+    /mingw64/bin
+    /usr/local/bin
+    /usr/bin
+    /bin
+    /mingw64/bin
+    /usr/bin
+    /c/Users/liyin/bin
+    /c/Program Files/Java/jdk-10.0.1/bin
+    /c/Program Files (x86)/Common Files/Oracle/Java/javapath
+    /c/Program Files (x86)/Intel/iCLS Client
+    /c/Program Files/Intel/iCLS Client
+    /c/WINDOWS/system32
+    /c/WINDOWS
+    /c/WINDOWS/System32/Wbem
+    /c/WINDOWS/System32/WindowsPowerShell/v1.0
+    /c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL
+    /c/Program Files/Intel/Intel(R) Management Engine Components/DAL
+    /c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT
+    /c/Program Files/Intel/Intel(R) Management Engine Components/IPT
+    /c/Program Files/dotnet
+    /c/WINDOWS/System32/OpenSSH
+    /c/Program Files/Intel/WiFi/bin
+    /c/Program Files/Common Files/Intel/WirelessCommon
+    /cmd
+    /c/Program Files/PuTTY
+    /c/Program Files/gnuplot/bin
+    /c/Users/liyin/AppData/Local/Microsoft/WindowsApps
+    /c/Users/liyin/AppData/Roaming/Dashlane/4.8.7.35982/ucrt
+    /c/Users/liyin/AppData/Local/atom/bin
+    /c/Users/liyin/AppData/Local/GitHubDesktop/bin
+    /c/Users/liyin/AppData/Local/Microsoft/WindowsApps
+    /usr/bin/vendor_perl
+    /usr/bin/core_perl
+
+    ```
+
+6.  Print your home directory.
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:/d/liying/!working/GitHub/python-for-data-analysis/data]$
+    cd
+    [liyin@Lily:~]$
+    pwd
+    /c/Users/liyin
+
+    ```
+
+7.  Write a for loop to count to 10
+    ```{bash eval=FALSE, include=TRUE}
+    [liyin@Lily:~]$
+    for i in {1..10}; do  echo $i; done
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+
+    ```
+
